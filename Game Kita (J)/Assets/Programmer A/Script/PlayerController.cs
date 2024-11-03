@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public int maxHealth = 3;
     public int health = 3; // Health parameter to control death condition
+    public HealthBar healthBar;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -102,6 +105,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        healthBar.SetHealth( health );
         if (health <= 0)
         {
             Die();
