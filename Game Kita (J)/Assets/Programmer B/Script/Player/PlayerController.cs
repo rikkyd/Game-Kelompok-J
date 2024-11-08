@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,17 +9,28 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public int health = 3;
+
+
+    //tambahan dari rizza
+    public float originalSpeed;
+    private float freezetimer = 1f;
+    private bool isFrozen = false;
 
     Vector2 movementInput;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
     Animator animator;
     bool isAttacking;
+    bool isDead;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        //tambahan dari rizza
+        originalSpeed = moveSpeed;
     }
 
     private void FixedUpdate()
@@ -53,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
         // Update the isWalking parameter in the Animator
         animator.SetBool("isWalking", isMoving);
+
     }
 
     private bool TryMove(Vector2 direction)
@@ -99,4 +112,76 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
         animator.SetBool("isAttacking", false);
     }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        animator.SetBool("isDeath", true);
+        this.enabled = false; // Disable the player controller script
+    }
+
+    // Method to detect collision with enemy
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy")) // Ensure your enemy objects have the tag "Enemy"
+        {
+            Debug.Log("kena damage");
+            TakeDamage(1); // Adjust the damage value as needed
+        }
+
+        //tambahan dari rizza
+        if (other.CompareTag("Trap"))
+        {
+            Debug.Log("Kena Damage dari trap");
+            TakeDamage(1);
+        }
+    }
+
+    //tambahan dari rizza untuk boss buaya yang ngeluarin bola pasir hisap
+    public void ModifySpeed(float slowAmount, float duration)
+    {
+        moveSpeed *= slowAmount;
+        StartCoroutine(ResetSpeedAfterDuration(duration));
+    }
+
+    //tambahan untuk boss Harimau yang bikin ngefreeze
+    public void Freeze(float duration)
+    {
+        if (!isFrozen) // Pastikan efek freeze tidak diaktifkan berulang kali
+        {
+            Debug.Log("Ngefreeze");
+            isFrozen = true;
+            originalSpeed = moveSpeed;
+            moveSpeed = 0;
+            StartCoroutine(UnfreezeAfterDuration(duration));
+        }
+    }
+
+    private IEnumerator UnfreezeAfterDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Unfreeze();
+    }
+
+    private void Unfreeze()
+    {
+        isFrozen = false;
+        moveSpeed = originalSpeed;
+    }
+
+    private IEnumerator ResetSpeedAfterDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        moveSpeed = originalSpeed;
+    }
+
 }
