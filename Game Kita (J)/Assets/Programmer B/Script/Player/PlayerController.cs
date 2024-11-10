@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; // Pastikan namespace ini ada untuk InputSystem
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +9,10 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
     public int health = 3; // Health parameter to control death condition
-    public ArrowBarScript arrowBarScript; // Reference to the ArrowBarScript component
+    public int arrowCount = 10; // Initialize with a default value, for example 10
+    public int coinCount = 0;
+    public int potionCount = 0;
+    public PlayerUI playerUI; // Reference to the PlayerUI component
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -22,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        UpdateUI(); // Update the display at the start
     }
 
     private void FixedUpdate()
@@ -82,19 +86,16 @@ public class PlayerController : MonoBehaviour
         if (context.isPressed)
         {
             Debug.Log("Fire action performed");
-            if (arrowBarScript != null)
-            {
-                arrowBarScript.UseArrow();
-            }
+            UseArrow();
         }
     }
 
-    void OnMove(InputValue movementValue) // Perbaikan di sini
+    void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
     }
 
-    void OnAttack(InputValue attackValue) // Perbaikan di sini
+    void OnAttack(InputValue attackValue)
     {
         if (attackValue.isPressed && !isAttacking && !isDead)
         {
@@ -129,12 +130,56 @@ public class PlayerController : MonoBehaviour
         this.enabled = false; // Disable the player controller script
     }
 
-    // Method to detect collision with enemy
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy")) // Ensure your enemy objects have the tag "Enemy"
         {
             TakeDamage(1); // Adjust the damage value as needed
+        }
+    }
+
+    public void UseArrow()
+    {
+        if (arrowCount > 0)
+        {
+            arrowCount--;
+            Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
+            UpdateUI(); // Update the display after using an arrow
+        }
+        else
+        {
+            Debug.Log("No arrows left to use.");
+        }
+    }
+
+    public void BuyArrow()
+    {
+        arrowCount++;
+        Debug.Log("Arrow bought. Total arrows: " + arrowCount);
+        UpdateUI(); // Update the display after buying an arrow
+    }
+
+    public void CollectCoin()
+    {
+        coinCount++;
+        Debug.Log("Coin collected. Total coins: " + coinCount);
+        UpdateUI(); // Update the display after collecting a coin
+    }
+
+    public void CollectPotion()
+    {
+        potionCount++;
+        Debug.Log("Potion collected. Total potions: " + potionCount);
+        UpdateUI(); // Update the display after collecting a potion
+    }
+
+    private void UpdateUI()
+    {
+        if (playerUI != null)
+        {
+            playerUI.UpdateArrowDisplay(arrowCount);
+            playerUI.UpdateCoinDisplay(coinCount);
+            playerUI.UpdatePotionDisplay(potionCount);
         }
     }
 }
