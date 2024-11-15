@@ -137,6 +137,7 @@ public class BossHarimau : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            Destroy(gameObject);
         }
     }
 

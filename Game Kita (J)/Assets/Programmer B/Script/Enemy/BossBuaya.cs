@@ -103,9 +103,9 @@ public class BossBuaya : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            Destroy(gameObject);
         }
     }
-
 
     private void Die()
     {
