@@ -10,12 +10,15 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
     public int health = 3;
-
-
     //tambahan dari rizza
     public float originalSpeed;
     private float freezetimer = 1f;
     private bool isFrozen = false;
+    public int health = 3; // Health parameter to control death condition
+    public int arrowCount = 10; // Initialize with a default value, for example 10
+    public int coinCount = 0;
+    public int potionCount = 0;
+    public PlayerUI playerUI; // Reference to the PlayerUI component
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -28,22 +31,22 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
         //tambahan dari rizza
         originalSpeed = moveSpeed;
+        UpdateUI(); // Update the display at the start
     }
 
     private void FixedUpdate()
     {
+        if (isDead) return;
+
         if (isAttacking)
         {
-            // During an attack, the player won't move
             return;
         }
 
         bool isMoving = movementInput != Vector2.zero;
 
-        // Try to move in the direction of input if there is movement
         if (isMoving)
         {
             bool success = TryMove(movementInput);
@@ -58,12 +61,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            // Update animator direction parameters
             animator.SetFloat("DirectionX", movementInput.x);
             animator.SetFloat("DirectionY", movementInput.y);
         }
 
-        // Update the isWalking parameter in the Animator
         animator.SetBool("isWalking", isMoving);
 
     }
@@ -88,6 +89,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnFire(InputValue context)
+    {
+        Debug.Log("OnFire called");
+        if (context.isPressed)
+        {
+            Debug.Log("Fire action performed");
+            UseArrow();
+        }
+    }
+
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
@@ -95,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     void OnAttack(InputValue attackValue)
     {
-        if (attackValue.isPressed && !isAttacking)
+        if (attackValue.isPressed && !isAttacking && !isDead)
         {
             StartCoroutine(Attack());
         }
@@ -106,7 +117,6 @@ public class PlayerController : MonoBehaviour
         isAttacking = true;
         animator.SetBool("isAttacking", true);
 
-        // Delay for the duration of the attack animation (adjust this duration)
         yield return new WaitForSeconds(0.5f);
 
         isAttacking = false;
@@ -184,4 +194,53 @@ public class PlayerController : MonoBehaviour
         moveSpeed = originalSpeed;
     }
 
+}
+            TakeDamage(1); // Adjust the damage value as needed
+        }
+    }
+
+    public void UseArrow()
+    {
+        if (arrowCount > 0)
+        {
+            arrowCount--;
+            Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
+            UpdateUI(); // Update the display after using an arrow
+        }
+        else
+        {
+            Debug.Log("No arrows left to use.");
+        }
+    }
+
+    public void BuyArrow()
+    {
+        arrowCount++;
+        Debug.Log("Arrow bought. Total arrows: " + arrowCount);
+        UpdateUI(); // Update the display after buying an arrow
+    }
+
+    public void CollectCoin()
+    {
+        coinCount++;
+        Debug.Log("Coin collected. Total coins: " + coinCount);
+        UpdateUI(); // Update the display after collecting a coin
+    }
+
+    public void CollectPotion()
+    {
+        potionCount++;
+        Debug.Log("Potion collected. Total potions: " + potionCount);
+        UpdateUI(); // Update the display after collecting a potion
+    }
+
+    private void UpdateUI()
+    {
+        if (playerUI != null)
+        {
+            playerUI.UpdateArrowDisplay(arrowCount);
+            playerUI.UpdateCoinDisplay(coinCount);
+            playerUI.UpdatePotionDisplay(potionCount);
+        }
+    }
 }
