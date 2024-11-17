@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public int health = 3;
+    //tambahan dari rizza
+    public float originalSpeed;
+    private float freezetimer = 1f;
+    private bool isFrozen = false;
     public int health = 3; // Health parameter to control death condition
     public int arrowCount = 10; // Initialize with a default value, for example 10
     public int coinCount = 0;
@@ -25,6 +31,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        //tambahan dari rizza
+        originalSpeed = moveSpeed;
         UpdateUI(); // Update the display at the start
     }
 
@@ -58,6 +66,7 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetBool("isWalking", isMoving);
+
     }
 
     private bool TryMove(Vector2 direction)
@@ -130,10 +139,62 @@ public class PlayerController : MonoBehaviour
         this.enabled = false; // Disable the player controller script
     }
 
+    // Method to detect collision with enemy
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy")) // Ensure your enemy objects have the tag "Enemy"
         {
+            Debug.Log("kena damage");
+            TakeDamage(1); // Adjust the damage value as needed
+        }
+
+        //tambahan dari rizza
+        if (other.CompareTag("Trap"))
+        {
+            Debug.Log("Kena Damage dari trap");
+            TakeDamage(1);
+        }
+    }
+
+    //tambahan dari rizza untuk boss buaya yang ngeluarin bola pasir hisap
+    public void ModifySpeed(float slowAmount, float duration)
+    {
+        moveSpeed *= slowAmount;
+        StartCoroutine(ResetSpeedAfterDuration(duration));
+    }
+
+    //tambahan untuk boss Harimau yang bikin ngefreeze
+    public void Freeze(float duration)
+    {
+        if (!isFrozen) // Pastikan efek freeze tidak diaktifkan berulang kali
+        {
+            Debug.Log("Ngefreeze");
+            isFrozen = true;
+            originalSpeed = moveSpeed;
+            moveSpeed = 0;
+            StartCoroutine(UnfreezeAfterDuration(duration));
+        }
+    }
+
+    private IEnumerator UnfreezeAfterDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        Unfreeze();
+    }
+
+    private void Unfreeze()
+    {
+        isFrozen = false;
+        moveSpeed = originalSpeed;
+    }
+
+    private IEnumerator ResetSpeedAfterDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        moveSpeed = originalSpeed;
+    }
+
+}
             TakeDamage(1); // Adjust the damage value as needed
         }
     }
