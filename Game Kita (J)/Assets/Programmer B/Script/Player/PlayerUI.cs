@@ -12,7 +12,7 @@ public class PlayerUI : MonoBehaviour
     {
         if (arrowText != null)
         {
-            arrowText.text = "Panah: " + arrowCount.ToString();
+            arrowText.text = arrowCount.ToString();
         }
     }
 
@@ -21,7 +21,7 @@ public class PlayerUI : MonoBehaviour
     {
         if (coinText != null)
         {
-            coinText.text = "Coins: " + coinCount.ToString();
+            coinText.text = coinCount.ToString();
         }
     }
 
@@ -30,7 +30,7 @@ public class PlayerUI : MonoBehaviour
     {
         if (potionText != null)
         {
-            potionText.text = "Potions: " + potionCount.ToString();
+            potionText.text = potionCount.ToString();
         }
     }
 }
