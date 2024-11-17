@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public float originalSpeed;
     private float freezetimer = 1f;
     private bool isFrozen = false;
-    public int health = 3; // Health parameter to control death condition
     public int arrowCount = 10; // Initialize with a default value, for example 10
     public int coinCount = 0;
     public int potionCount = 0;
@@ -192,11 +191,6 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         moveSpeed = originalSpeed;
-    }
-
-}
-            TakeDamage(1); // Adjust the damage value as needed
-        }
     }
 
     public void UseArrow()
