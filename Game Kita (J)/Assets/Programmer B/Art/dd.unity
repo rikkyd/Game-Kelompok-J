@@ -227,11 +227,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 294231154008879956, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -109.5
+      value: 30.5
       objectReference: {fileID: 0}
     - target: {fileID: 294231154008879956, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 102.00001
+      value: 82.00001
       objectReference: {fileID: 0}
     - target: {fileID: 2292930220134527869, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_Name
@@ -319,19 +319,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3993032023924740709, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -261
+      value: -121
       objectReference: {fileID: 0}
     - target: {fileID: 3993032023924740709, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 102
+      value: 82
       objectReference: {fileID: 0}
     - target: {fileID: 4329819948328697081, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -185.99998
+      value: -45.999985
       objectReference: {fileID: 0}
     - target: {fileID: 4329819948328697081, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 102.00001
+      value: 82.00001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -375,9 +375,29 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: playerUI
+      value: 
+      objectReference: {fileID: 1688859701}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: coinCount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: arrowCount
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: potionCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
       propertyPath: originalSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: senjataPlayer
+      value: 
+      objectReference: {fileID: 955622616}
     - target: {fileID: 5208919842194911935, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
       propertyPath: m_Mass
       value: 1
@@ -6551,6 +6571,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &955622616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5648666111490125911, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+  m_PrefabInstance: {fileID: 597477076}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8137639e43007744ace30fad266f65c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1131561523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7412584988790119145, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
@@ -20546,6 +20577,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1688859701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5614973626678612265, guid: 8cbea76d1a1e0a1488fbf4b43bd7c490, type: 3}
+  m_PrefabInstance: {fileID: 472904960}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334f349b7a3478d42946914fb2d8aed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836417134
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public int coinCount = 0;
     public int potionCount = 0;
     public PlayerUI playerUI; // Reference to the PlayerUI component
+    public SenjataPlayer senjataPlayer;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     Animator animator;
     bool isAttacking;
     bool isDead;
+    bool isShooting;
 
     void Start()
     {
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
     public void OnFire(InputValue context)
     {
         Debug.Log("OnFire called");
-        if (context.isPressed)
+        if (context.isPressed && !isAttacking && !isDead && !isShooting && senjataPlayer != null)
         {
             Debug.Log("Fire action performed");
             UseArrow();
@@ -197,14 +199,26 @@ public class PlayerController : MonoBehaviour
     {
         if (arrowCount > 0)
         {
-            arrowCount--;
-            Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
-            UpdateUI(); // Update the display after using an arrow
+            StartCoroutine(ShootArrow());
         }
         else
         {
             Debug.Log("No arrows left to use.");
         }
+    }
+
+    private IEnumerator ShootArrow()
+    {
+        isShooting = true;
+        senjataPlayer.Shoot();
+        arrowCount--;
+        Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
+        UpdateUI(); // Update the display after using an arrow
+
+        // Wait for the shooting animation to finish
+        yield return new WaitForSeconds(1f); // Adjust the duration to match your animation
+
+        isShooting = false;
     }
 
     public void BuyArrow()
