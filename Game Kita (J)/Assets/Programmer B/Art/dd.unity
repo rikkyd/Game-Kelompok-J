@@ -398,6 +398,10 @@ PrefabInstance:
       propertyPath: senjataPlayer
       value: 
       objectReference: {fileID: 955622616}
+    - target: {fileID: 3260553312481981782, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
+      propertyPath: startTimeBtwShots
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5208919842194911935, guid: 99a6f5e46ac104e4cbc8c14cfc5ec1ab, type: 3}
       propertyPath: m_Mass
       value: 1

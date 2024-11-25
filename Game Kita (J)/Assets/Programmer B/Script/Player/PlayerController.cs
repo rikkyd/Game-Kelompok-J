@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public int health = 3;
     //tambahan dari rizza
     public float originalSpeed;
+    public float startTimeBtwShots;
+    private float timeBtwShots;
     private float freezetimer = 1f;
     private bool isFrozen = false;
     public int arrowCount = 10; // Initialize with a default value, for example 10
@@ -90,10 +92,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+        private void Update()
+    {
+        // Update the cooldown timer for shooting
+        if (timeBtwShots > 0)
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
+
     public void OnFire(InputValue context)
     {
         Debug.Log("OnFire called");
-        if (context.isPressed && !isAttacking && !isDead && !isShooting && senjataPlayer != null)
+        if (context.isPressed && !isAttacking && !isDead && !isShooting && timeBtwShots <= 0 && senjataPlayer != null)
         {
             Debug.Log("Fire action performed");
             UseArrow();
@@ -215,10 +226,10 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
         UpdateUI(); // Update the display after using an arrow
 
-        // Wait for the shooting animation to finish
-        yield return new WaitForSeconds(1f); // Adjust the duration to match your animation
+        yield return null; // Ensure the method yields a value
 
         isShooting = false;
+        timeBtwShots = startTimeBtwShots; // Reset the cooldown timer
     }
 
     public void BuyArrow()
