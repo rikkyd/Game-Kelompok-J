@@ -9,30 +9,23 @@ public class SenjataPlayer : MonoBehaviour
     public GameObject projectile;
     public Transform shotPoint;
 
-    public float startTimeBtwShots;
-    private float TimeBtwShots;
-    // Start is called before the first frame update
     private void Update()
     {
+        // Update the rotation to follow the crosshair
         Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+    }
 
-        if (TimeBtwShots <= 0)
+    public void Shoot()
+    {
+        if (projectile != null && shotPoint != null)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Instantiate(projectile, shotPoint.position, transform.rotation);
-                TimeBtwShots = startTimeBtwShots;
-            }
+            Instantiate(projectile, shotPoint.position, transform.rotation);
         }
         else
         {
-            TimeBtwShots -= Time.deltaTime;
+            Debug.LogWarning("Projectile or ShotPoint is not assigned.");
         }
-
-
     }
-
-
 }
