@@ -6,21 +6,21 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    [Header("Movement Settings")]
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-    public int health = 3;
     //tambahan dari rizza
     public float originalSpeed;
-    public float startTimeBtwShots;
-    private float timeBtwShots;
     private float freezetimer = 1f;
     private bool isFrozen = false;
-    public int arrowCount = 10; // Initialize with a default value, for example 10
-    public int coinCount = 0;
-    public int potionCount = 0;
+
+    [Header("Shooting Settings")]
+    public float startTimeBtwShots;
+    private float timeBtwShots;
+
     public PlayerUI playerUI; // Reference to the PlayerUI component
     public SenjataPlayer senjataPlayer;
+    public PlayerStatsSO playerStats;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -34,8 +34,10 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerStats.arrowCount = playerStats.maxArrowCount; // Initialize the arrow count
+        playerStats.health = playerStats.maxHealth; // Initialize the health
         //tambahan dari rizza
-        originalSpeed = moveSpeed;
+        originalSpeed = playerStats.moveSpeed;
         UpdateUI(); // Update the display at the start
     }
 
@@ -78,12 +80,12 @@ public class PlayerController : MonoBehaviour
             direction,
             movementFilter,
             castCollisions,
-            moveSpeed * Time.fixedDeltaTime + collisionOffset
+            playerStats.moveSpeed * Time.fixedDeltaTime + collisionOffset
         );
 
         if (count == 0)
         {
-            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + direction * playerStats.moveSpeed * Time.fixedDeltaTime);
             return true;
         }
         else
@@ -137,8 +139,8 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        playerStats.health -= damage;
+        if (playerStats.health <= 0)
         {
             Die();
         }
@@ -171,7 +173,7 @@ public class PlayerController : MonoBehaviour
     //tambahan dari rizza untuk boss buaya yang ngeluarin bola pasir hisap
     public void ModifySpeed(float slowAmount, float duration)
     {
-        moveSpeed *= slowAmount;
+        playerStats.moveSpeed *= slowAmount;
         StartCoroutine(ResetSpeedAfterDuration(duration));
     }
 
@@ -182,8 +184,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Ngefreeze");
             isFrozen = true;
-            originalSpeed = moveSpeed;
-            moveSpeed = 0;
+            originalSpeed = playerStats.moveSpeed;
+            playerStats.moveSpeed = 0;
             StartCoroutine(UnfreezeAfterDuration(duration));
         }
     }
@@ -197,18 +199,18 @@ public class PlayerController : MonoBehaviour
     private void Unfreeze()
     {
         isFrozen = false;
-        moveSpeed = originalSpeed;
+        playerStats.moveSpeed = originalSpeed;
     }
 
     private IEnumerator ResetSpeedAfterDuration(float duration)
     {
         yield return new WaitForSeconds(duration);
-        moveSpeed = originalSpeed;
+        playerStats.moveSpeed = originalSpeed;
     }
 
     public void UseArrow()
     {
-        if (arrowCount > 0)
+        if (playerStats.arrowCount > 0)
         {
             StartCoroutine(ShootArrow());
         }
@@ -222,8 +224,8 @@ public class PlayerController : MonoBehaviour
     {
         isShooting = true;
         senjataPlayer.Shoot();
-        arrowCount--;
-        Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
+        playerStats.arrowCount--;
+        Debug.Log("Arrow used. Remaining arrows: " + playerStats.arrowCount);
         UpdateUI(); // Update the display after using an arrow
 
         yield return null; // Ensure the method yields a value
@@ -232,34 +234,42 @@ public class PlayerController : MonoBehaviour
         timeBtwShots = startTimeBtwShots; // Reset the cooldown timer
     }
 
-    public void BuyArrow()
-    {
-        arrowCount++;
-        Debug.Log("Arrow bought. Total arrows: " + arrowCount);
-        UpdateUI(); // Update the display after buying an arrow
-    }
-
     public void CollectCoin()
     {
-        coinCount++;
-        Debug.Log("Coin collected. Total coins: " + coinCount);
+        playerStats.coinCount++;
+        Debug.Log("Coin collected. Total coins: " + playerStats.coinCount);
         UpdateUI(); // Update the display after collecting a coin
     }
 
     public void CollectPotion()
     {
-        potionCount++;
-        Debug.Log("Potion collected. Total potions: " + potionCount);
+        playerStats.potionCount++;
+        Debug.Log("Potion collected. Total potions: " + playerStats.potionCount);
         UpdateUI(); // Update the display after collecting a potion
+    }
+
+    public void usePotion()
+    {
+        if (playerStats.potionCount > 0)
+        {
+            playerStats.potionCount--;
+            playerStats.health++;
+            Debug.Log("Potion used. Remaining potions: " + playerStats.potionCount);
+            UpdateUI(); // Update the display after using a potion
+        }
+        else
+        {
+            Debug.Log("No potions left to use.");
+        }
     }
 
     private void UpdateUI()
     {
         if (playerUI != null)
         {
-            playerUI.UpdateArrowDisplay(arrowCount);
-            playerUI.UpdateCoinDisplay(coinCount);
-            playerUI.UpdatePotionDisplay(potionCount);
+            playerUI.UpdateArrowDisplay(playerStats.arrowCount);
+            playerUI.UpdateCoinDisplay(playerStats.coinCount);
+            playerUI.UpdatePotionDisplay(playerStats.potionCount);
         }
     }
 }
