@@ -18,7 +18,7 @@ MonoBehaviour:
   arrowCount: 15
   coinCount: 0
   potionCount: 0
-  moveSpeed: 1
+  moveSpeed: 15
   maxHealthUpgrade: 1
   maxArrowCountUpgrade: 1
   moveSpeedUpgrade: 1

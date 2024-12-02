@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SlowTrap : MonoBehaviour
 {
-    public float speed;
     public float slowDuration = 1.5f;
     public float slowAmount = 0.4f;
 
