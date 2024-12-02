@@ -37,7 +37,7 @@ public class ProjectileKecilBossHarimau : MonoBehaviour
         float randomvalue = Random.Range(0f, 100f);
         if (randomvalue < freezeChance)
         {
-            PlayerController playerController = player.GetComponent<PlayerController>();
+            Debuff playerController = player.GetComponent<Debuff>();
             if (playerController != null)
             {
                 playerController.Freeze(freezeDuration);

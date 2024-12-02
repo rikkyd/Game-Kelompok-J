@@ -9,10 +9,6 @@ public class PlayerController : MonoBehaviour
     [Header("Movement Settings")]
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-    //tambahan dari rizza
-    public float originalSpeed;
-    private float freezetimer = 1f;
-    private bool isFrozen = false;
 
     [Header("Shooting Settings")]
     public float startTimeBtwShots;
@@ -36,8 +32,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         playerStats.arrowCount = playerStats.maxArrowCount; // Initialize the arrow count
         playerStats.health = playerStats.maxHealth; // Initialize the health
-        //tambahan dari rizza
-        originalSpeed = playerStats.moveSpeed;
+
         UpdateUI(); // Update the display at the start
     }
 
@@ -168,44 +163,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Kena Damage dari trap");
             TakeDamage(1);
         }
-    }
 
-    //tambahan dari rizza untuk boss buaya yang ngeluarin bola pasir hisap
-    public void ModifySpeed(float slowAmount, float duration)
-    {
-        playerStats.moveSpeed *= slowAmount;
-        StartCoroutine(ResetSpeedAfterDuration(duration));
-    }
-
-    //tambahan untuk boss Harimau yang bikin ngefreeze
-    public void Freeze(float duration)
-    {
-        if (!isFrozen) // Pastikan efek freeze tidak diaktifkan berulang kali
+        if (other.CompareTag("ProjectileKomodo"))
         {
-            Debug.Log("Ngefreeze");
-            isFrozen = true;
-            originalSpeed = playerStats.moveSpeed;
-            playerStats.moveSpeed = 0;
-            StartCoroutine(UnfreezeAfterDuration(duration));
+            TakeDamage(2);
         }
-    }
-
-    private IEnumerator UnfreezeAfterDuration(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        Unfreeze();
-    }
-
-    private void Unfreeze()
-    {
-        isFrozen = false;
-        playerStats.moveSpeed = originalSpeed;
-    }
-
-    private IEnumerator ResetSpeedAfterDuration(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        playerStats.moveSpeed = originalSpeed;
     }
 
     public void UseArrow()

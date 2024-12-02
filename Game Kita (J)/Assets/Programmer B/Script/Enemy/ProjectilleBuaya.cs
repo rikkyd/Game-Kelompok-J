@@ -49,7 +49,7 @@ public class SeranganBossBuaya : MonoBehaviour
     //untuk Boss Buaya
     void SlowMovement(Collider2D player)
     {
-        PlayerController playermovement = player.GetComponent<PlayerController>();
+        Debuff playermovement = player.GetComponent<Debuff>();
 
         if (playermovement != null)
         {
