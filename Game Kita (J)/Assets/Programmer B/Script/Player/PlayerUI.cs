@@ -7,7 +7,10 @@ public class PlayerUI : MonoBehaviour
     public TextMeshProUGUI arrowText; // Reference to the UI Text component for arrows
     public TextMeshProUGUI coinText;  // Reference to the UI Text component for coins
     public TextMeshProUGUI potionText; // Reference to the UI Text component for potions
-    public Slider HPBar; // Reference to the UI Slider component for health
+    public Image HPBarCurrent; // Reference to the UI Slider component for health
+    public Image HPBarTotal;
+    public Image LevelBarCurrent;
+    public Image LevelBarTotal;
     // Method to update the arrow display
 
     public void UpdateUI(int hp, int maxHp, int arrowCount, int coinCount, int potionCount)
@@ -20,10 +23,18 @@ public class PlayerUI : MonoBehaviour
 
     public void UpdateHPBar(int currentHealth, int maxHealth)
     {
-        if (HPBar != null)
+        if (HPBarCurrent != null && HPBarTotal != null)
         {
-            HPBar.maxValue = maxHealth;
-            HPBar.value = currentHealth;
+            HPBarCurrent.fillAmount = (float)currentHealth / maxHealth;
+            HPBarTotal.fillAmount = 1;
+        }
+    }
+    public void UpdateLevelBar(int currentLevel, int maxLevel)
+    {
+        if (LevelBarCurrent != null && LevelBarTotal != null)
+        {
+            LevelBarCurrent.fillAmount = (float)currentLevel / maxLevel;
+            LevelBarTotal.fillAmount = 1;
         }
     }
     public void UpdateArrowDisplay(int arrowCount)

@@ -39,7 +39,7 @@ public class StoreManager : MonoBehaviour
     public GameObject speedInfoPanel;
     public GameObject potionInfoPanel;
     public Button backBtn;
-    
+    public Button outsideClickButton; // Reference to the transparent button
     public TextMeshProUGUI playerCoins;
     public PlayerStatsSO playerStats;
 
@@ -50,6 +50,7 @@ public class StoreManager : MonoBehaviour
         skillInfoPanel.SetActive(false);
         speedInfoPanel.SetActive(false);
         potionInfoPanel.SetActive(false);
+        outsideClickButton.gameObject.SetActive(false); // Hide the button initially
     }
 
     // Update is called once per frame
@@ -186,6 +187,7 @@ public class StoreManager : MonoBehaviour
         skillInfoPanel.SetActive(true);
         speedInfoPanel.SetActive(false);
         potionInfoPanel.SetActive(false);
+        outsideClickButton.gameObject.SetActive(true); // Show the button
     }
 
     public void SpeedInfoBtn()
@@ -193,6 +195,7 @@ public class StoreManager : MonoBehaviour
         skillInfoPanel.SetActive(false);
         speedInfoPanel.SetActive(true);
         potionInfoPanel.SetActive(false);
+        outsideClickButton.gameObject.SetActive(true); // Show the button
     }
 
     public void PotionInfoBtn()
@@ -200,6 +203,15 @@ public class StoreManager : MonoBehaviour
         skillInfoPanel.SetActive(false);
         speedInfoPanel.SetActive(false);
         potionInfoPanel.SetActive(true);
+        outsideClickButton.gameObject.SetActive(true); // Show the button
+    }
+
+    public void OutsideClick()
+    {
+        skillInfoPanel.SetActive(false);
+        speedInfoPanel.SetActive(false);
+        potionInfoPanel.SetActive(false);
+        outsideClickButton.gameObject.SetActive(false); // Hide the button
     }
 
     public void BackBtn()

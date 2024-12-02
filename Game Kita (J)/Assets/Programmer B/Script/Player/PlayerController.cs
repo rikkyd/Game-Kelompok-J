@@ -143,6 +143,8 @@ public class PlayerController : MonoBehaviour
         playerStats.health -= damage;
         if (playerStats.health <= 0)
         {
+            playerStats.health = 0;
+            playerUI.UpdateUI(playerStats.health, playerStats.maxHealth, playerStats.arrowCount, playerStats.coinCount, playerStats.potionCount);
             Die();
         }
     }
