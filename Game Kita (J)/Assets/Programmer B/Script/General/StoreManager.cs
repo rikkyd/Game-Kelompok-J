@@ -121,6 +121,7 @@ public class StoreManager : MonoBehaviour
             {
                 playerStats.coinCount -= playerStats.skillUpgrade + 1;
                 playerStats.skillUpgrade++;
+                playerStats.maxArrowCount = playerStats.baseArrowCount + playerStats.skillUpgrade * 5;
             }
         }
         else
@@ -137,6 +138,7 @@ public class StoreManager : MonoBehaviour
             {
                 playerStats.coinCount -= playerStats.speedUpgrade + 1;
                 playerStats.speedUpgrade++;
+                playerStats.moveSpeed = playerStats.baseMoveSpeed + playerStats.speedUpgrade;
             }
         }
         else
@@ -147,7 +149,7 @@ public class StoreManager : MonoBehaviour
 
     public void BuyPotionButton()
     {
-        if (playerStats.potionCount <= playerStats.maxPotionCount)
+        if (playerStats.potionCount < playerStats.maxPotionCount)
         {
             if (playerStats.coinCount >= playerStats.potionCount + 1)
             {
@@ -169,6 +171,7 @@ public class StoreManager : MonoBehaviour
         }
         playerStats.coinCount += totalRefund;
         playerStats.skillUpgrade = 0;
+        playerStats.maxArrowCount = playerStats.baseArrowCount;
     }
 
     public void ResetSpeed()
@@ -180,6 +183,7 @@ public class StoreManager : MonoBehaviour
         }
         playerStats.coinCount += totalRefund;
         playerStats.speedUpgrade = 0;
+        playerStats.moveSpeed = playerStats.baseMoveSpeed;
     }
 
     public void SkillInfoBtn()

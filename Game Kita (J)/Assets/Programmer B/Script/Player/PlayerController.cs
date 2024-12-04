@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    PlayerInventory playerInventory;
     Animator animator;
     bool isAttacking;
     bool isDead;
@@ -30,11 +31,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        playerInventory = GetComponent<PlayerInventory>();
         playerStats.arrowCount = playerStats.maxArrowCount; // Initialize the arrow count
         playerStats.health = playerStats.maxHealth; // Initialize the health
-        UpdateUI(); // Update the display at the start
-        //tambahan dari rizza
-        originalSpeed = playerStats.moveSpeed;
     }
 
     private void FixedUpdate()
@@ -108,6 +107,14 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Fire action performed");
             UseArrow();
+        }
+    }
+
+    public void OnHeal(InputValue context)
+    {
+        if (context.isPressed && !isAttacking && !isDead && !isShooting && playerStats.potionCount > 0)
+        {
+            playerInventory.usePotion();
         }
     }
 
@@ -198,37 +205,5 @@ public class PlayerController : MonoBehaviour
 
         isShooting = false;
         timeBtwShots = startTimeBtwShots; // Reset the cooldown timer
-    }
-
-    public void CollectCoin()
-    {
-        playerStats.coinCount++;
-        Debug.Log("Coin collected. Total coins: " + playerStats.coinCount);
-    }
-
-    public void CollectPotion()
-    {
-        if (playerStats.potionCount <= playerStats.maxPotionCount){
-            playerStats.potionCount++;
-            Debug.Log("Potion collected. Total potions: " + playerStats.potionCount);
-        }
-        else
-        {
-            Debug.Log("Potion count is at maximum.");
-        }
-    }
-
-    public void usePotion()
-    {
-        if (playerStats.potionCount > 0)
-        {
-            playerStats.potionCount--;
-            playerStats.health++;
-            Debug.Log("Potion used. Remaining potions: " + playerStats.potionCount);
-        }
-        else
-        {
-            Debug.Log("No potions left to use.");
-        }
     }
 }
