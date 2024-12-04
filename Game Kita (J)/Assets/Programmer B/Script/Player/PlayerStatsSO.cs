@@ -9,11 +9,11 @@ public class PlayerStatsSO : ScriptableObject
     public int maxArrowCount = 15;
     public int arrowCount = 15;
     public int coinCount = 0;
+    public int maxPotionCount = 5;
     public int potionCount = 0;
     public float moveSpeed = 1f;
 
     [Header("Upgrades")]    
-    public int maxHealthUpgrade = 1;
-    public int maxArrowCountUpgrade = 1;
-    public int moveSpeedUpgrade = 1;
+    public int skillUpgrade = 0; //max arrow count
+    public int speedUpgrade = 0; //move speed
 }

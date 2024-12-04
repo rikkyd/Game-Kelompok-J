@@ -32,8 +32,9 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         playerStats.arrowCount = playerStats.maxArrowCount; // Initialize the arrow count
         playerStats.health = playerStats.maxHealth; // Initialize the health
-
         UpdateUI(); // Update the display at the start
+        //tambahan dari rizza
+        originalSpeed = playerStats.moveSpeed;
     }
 
     private void FixedUpdate()
@@ -67,6 +68,8 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("isWalking", isMoving);
 
+        // Update the UI
+        playerUI.UpdateUI(playerStats.health, playerStats.maxHealth, playerStats.arrowCount, playerStats.coinCount, playerStats.potionCount);
     }
 
     private bool TryMove(Vector2 direction)
@@ -137,6 +140,8 @@ public class PlayerController : MonoBehaviour
         playerStats.health -= damage;
         if (playerStats.health <= 0)
         {
+            playerStats.health = 0;
+            playerUI.UpdateUI(playerStats.health, playerStats.maxHealth, playerStats.arrowCount, playerStats.coinCount, playerStats.potionCount);
             Die();
         }
     }
@@ -188,7 +193,6 @@ public class PlayerController : MonoBehaviour
         senjataPlayer.Shoot();
         playerStats.arrowCount--;
         Debug.Log("Arrow used. Remaining arrows: " + playerStats.arrowCount);
-        UpdateUI(); // Update the display after using an arrow
 
         yield return null; // Ensure the method yields a value
 
@@ -200,14 +204,18 @@ public class PlayerController : MonoBehaviour
     {
         playerStats.coinCount++;
         Debug.Log("Coin collected. Total coins: " + playerStats.coinCount);
-        UpdateUI(); // Update the display after collecting a coin
     }
 
     public void CollectPotion()
     {
-        playerStats.potionCount++;
-        Debug.Log("Potion collected. Total potions: " + playerStats.potionCount);
-        UpdateUI(); // Update the display after collecting a potion
+        if (playerStats.potionCount <= playerStats.maxPotionCount){
+            playerStats.potionCount++;
+            Debug.Log("Potion collected. Total potions: " + playerStats.potionCount);
+        }
+        else
+        {
+            Debug.Log("Potion count is at maximum.");
+        }
     }
 
     public void usePotion()
@@ -217,21 +225,10 @@ public class PlayerController : MonoBehaviour
             playerStats.potionCount--;
             playerStats.health++;
             Debug.Log("Potion used. Remaining potions: " + playerStats.potionCount);
-            UpdateUI(); // Update the display after using a potion
         }
         else
         {
             Debug.Log("No potions left to use.");
-        }
-    }
-
-    private void UpdateUI()
-    {
-        if (playerUI != null)
-        {
-            playerUI.UpdateArrowDisplay(playerStats.arrowCount);
-            playerUI.UpdateCoinDisplay(playerStats.coinCount);
-            playerUI.UpdatePotionDisplay(playerStats.potionCount);
         }
     }
 }

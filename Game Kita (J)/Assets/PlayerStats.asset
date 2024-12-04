@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaa389b0e83d57b44ae8cdbb26f81457, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  maxHealth: 15
-  health: 15
+  maxHealth: 5
+  health: 5
   maxArrowCount: 15
-  arrowCount: 15
-  coinCount: 0
+  arrowCount: 10
+  coinCount: 45
+  maxPotionCount: 5
   potionCount: 0
-  moveSpeed: 15
-  maxHealthUpgrade: 1
-  maxArrowCountUpgrade: 1
-  moveSpeedUpgrade: 1
+  moveSpeed: 1
+  skillUpgrade: 0
+  speedUpgrade: 0
