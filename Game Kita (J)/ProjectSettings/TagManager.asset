@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Trap
   - Enemy
-  - Power
+  - NonDamageTrap
+  - ProjectileKomodo
   layers:
   - Default
   - TransparentFX
@@ -16,8 +18,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Object
+  - Enemy
   - 
   - 
   - 
