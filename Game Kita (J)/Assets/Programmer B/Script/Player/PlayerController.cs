@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-    public int health = 3;
+    public int maxHealth = 3;
     //tambahan dari rizza
+    public int health = 3; // Health parameter to control death condition
     public float originalSpeed;
     private float freezetimer = 1f;
     private bool isFrozen = false;
@@ -28,8 +29,9 @@ public class PlayerController : MonoBehaviour
     bool isDead;
     bool isShooting;
 
-    void Start()
+    private void Start()
     {
+        health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         //tambahan dari rizza
