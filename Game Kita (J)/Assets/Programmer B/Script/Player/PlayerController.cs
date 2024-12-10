@@ -6,9 +6,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 1f;
+    [Header("Movement Settings")]
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+<<<<<<< HEAD
     public int maxHealth = 3;
     //tambahan dari rizza
     public int health = 3; // Health parameter to control death condition
@@ -18,12 +19,21 @@ public class PlayerController : MonoBehaviour
     public int arrowCount = 10; // Initialize with a default value, for example 10
     public int coinCount = 0;
     public int potionCount = 0;
+=======
+
+    [Header("Shooting Settings")]
+    public float startTimeBtwShots;
+    private float timeBtwShots;
+
+>>>>>>> 8fbd9c0eb8c39a0979c4ce813e5a719b454ef413
     public PlayerUI playerUI; // Reference to the PlayerUI component
     public SenjataPlayer senjataPlayer;
+    public PlayerStatsSO playerStats;
 
     Vector2 movementInput;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    PlayerInventory playerInventory;
     Animator animator;
     bool isAttacking;
     bool isDead;
@@ -34,9 +44,9 @@ public class PlayerController : MonoBehaviour
         health = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        //tambahan dari rizza
-        originalSpeed = moveSpeed;
-        UpdateUI(); // Update the display at the start
+        playerInventory = GetComponent<PlayerInventory>();
+        playerStats.arrowCount = playerStats.maxArrowCount; // Initialize the arrow count
+        playerStats.health = playerStats.maxHealth; // Initialize the health
     }
 
     private void FixedUpdate()
@@ -70,6 +80,8 @@ public class PlayerController : MonoBehaviour
 
         animator.SetBool("isWalking", isMoving);
 
+        // Update the UI
+        playerUI.UpdateUI(playerStats.health, playerStats.maxHealth, playerStats.arrowCount, playerStats.coinCount, playerStats.potionCount);
     }
 
     private bool TryMove(Vector2 direction)
@@ -78,12 +90,12 @@ public class PlayerController : MonoBehaviour
             direction,
             movementFilter,
             castCollisions,
-            moveSpeed * Time.fixedDeltaTime + collisionOffset
+            playerStats.moveSpeed * Time.fixedDeltaTime + collisionOffset
         );
 
         if (count == 0)
         {
-            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + direction * playerStats.moveSpeed * Time.fixedDeltaTime);
             return true;
         }
         else
@@ -92,13 +104,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+        private void Update()
+    {
+        // Update the cooldown timer for shooting
+        if (timeBtwShots > 0)
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
+
     public void OnFire(InputValue context)
     {
         Debug.Log("OnFire called");
-        if (context.isPressed && !isAttacking && !isDead && !isShooting && senjataPlayer != null)
+        if (context.isPressed && !isAttacking && !isDead && !isShooting && timeBtwShots <= 0 && senjataPlayer != null)
         {
             Debug.Log("Fire action performed");
             UseArrow();
+        }
+    }
+
+    public void OnHeal(InputValue context)
+    {
+        if (context.isPressed && !isAttacking && !isDead && !isShooting && playerStats.potionCount > 0)
+        {
+            playerInventory.usePotion();
         }
     }
 
@@ -128,9 +157,11 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0)
+        playerStats.health -= damage;
+        if (playerStats.health <= 0)
         {
+            playerStats.health = 0;
+            playerUI.UpdateUI(playerStats.health, playerStats.maxHealth, playerStats.arrowCount, playerStats.coinCount, playerStats.potionCount);
             Die();
         }
     }
@@ -157,49 +188,16 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Kena Damage dari trap");
             TakeDamage(1);
         }
-    }
 
-    //tambahan dari rizza untuk boss buaya yang ngeluarin bola pasir hisap
-    public void ModifySpeed(float slowAmount, float duration)
-    {
-        moveSpeed *= slowAmount;
-        StartCoroutine(ResetSpeedAfterDuration(duration));
-    }
-
-    //tambahan untuk boss Harimau yang bikin ngefreeze
-    public void Freeze(float duration)
-    {
-        if (!isFrozen) // Pastikan efek freeze tidak diaktifkan berulang kali
+        if (other.CompareTag("ProjectileKomodo"))
         {
-            Debug.Log("Ngefreeze");
-            isFrozen = true;
-            originalSpeed = moveSpeed;
-            moveSpeed = 0;
-            StartCoroutine(UnfreezeAfterDuration(duration));
+            TakeDamage(2);
         }
-    }
-
-    private IEnumerator UnfreezeAfterDuration(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        Unfreeze();
-    }
-
-    private void Unfreeze()
-    {
-        isFrozen = false;
-        moveSpeed = originalSpeed;
-    }
-
-    private IEnumerator ResetSpeedAfterDuration(float duration)
-    {
-        yield return new WaitForSeconds(duration);
-        moveSpeed = originalSpeed;
     }
 
     public void UseArrow()
     {
-        if (arrowCount > 0)
+        if (playerStats.arrowCount > 0)
         {
             StartCoroutine(ShootArrow());
         }
@@ -213,44 +211,12 @@ public class PlayerController : MonoBehaviour
     {
         isShooting = true;
         senjataPlayer.Shoot();
-        arrowCount--;
-        Debug.Log("Arrow used. Remaining arrows: " + arrowCount);
-        UpdateUI(); // Update the display after using an arrow
+        playerStats.arrowCount--;
+        Debug.Log("Arrow used. Remaining arrows: " + playerStats.arrowCount);
 
-        // Wait for the shooting animation to finish
-        yield return new WaitForSeconds(1f); // Adjust the duration to match your animation
+        yield return null; // Ensure the method yields a value
 
         isShooting = false;
-    }
-
-    public void BuyArrow()
-    {
-        arrowCount++;
-        Debug.Log("Arrow bought. Total arrows: " + arrowCount);
-        UpdateUI(); // Update the display after buying an arrow
-    }
-
-    public void CollectCoin()
-    {
-        coinCount++;
-        Debug.Log("Coin collected. Total coins: " + coinCount);
-        UpdateUI(); // Update the display after collecting a coin
-    }
-
-    public void CollectPotion()
-    {
-        potionCount++;
-        Debug.Log("Potion collected. Total potions: " + potionCount);
-        UpdateUI(); // Update the display after collecting a potion
-    }
-
-    private void UpdateUI()
-    {
-        if (playerUI != null)
-        {
-            playerUI.UpdateArrowDisplay(arrowCount);
-            playerUI.UpdateCoinDisplay(coinCount);
-            playerUI.UpdatePotionDisplay(potionCount);
-        }
+        timeBtwShots = startTimeBtwShots; // Reset the cooldown timer
     }
 }

@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack
-  m_Speed: 0.175
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2221974487257260069}
@@ -114,13 +114,13 @@ AnimatorStateMachine:
     m_Position: {x: 1880, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3150308216780346837}
-    m_Position: {x: 750, y: 160, z: 0}
+    m_Position: {x: 570, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8748693385207237477}
     m_Position: {x: 1510, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2348775949925496538}
-    m_Position: {x: 180, y: -220, z: 0}
+    m_Position: {x: 310, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -934965259377235706}
     m_Position: {x: 1570, y: 50, z: 0}
@@ -129,7 +129,7 @@ AnimatorStateMachine:
     m_Position: {x: 300, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9076924239533694401}
-    m_Position: {x: 590, y: -70, z: 0}
+    m_Position: {x: 560, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5724995857436088122}
     m_Position: {x: 1320, y: -120, z: 0}
@@ -143,8 +143,8 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 540, y: 180, z: 0}
-  m_EntryPosition: {x: -270, y: 70, z: 0}
+  m_AnyStatePosition: {x: 590, y: 80, z: 0}
+  m_EntryPosition: {x: -60, y: 20, z: 0}
   m_ExitPosition: {x: 0, y: 510, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 2989090488567700583}
@@ -338,7 +338,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Death
-  m_Speed: 0.175
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -426,7 +426,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Movement
-  m_Speed: 0.175
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8061669511650744091}
@@ -704,7 +704,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle
-  m_Speed: 0.175
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2090678669751811209}
