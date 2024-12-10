@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  timetoLife: 4
+  timetoLife: 6
   damage: 1
   knockbackForce: 15
 --- !u!70 &1385843611998427334
