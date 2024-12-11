@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - NonDamageTrap
   - ProjectileKomodo
+  - Coin
+  - Arrow
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Object
   - Enemy
   - 
   - 

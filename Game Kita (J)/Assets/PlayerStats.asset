@@ -20,7 +20,7 @@ MonoBehaviour:
   coinCount: 0
   maxPotionCount: 5
   potionCount: 0
-  moveSpeed: 5.6
+  moveSpeed: 9
   baseMoveSpeed: 9
   skillUpgrade: 5
   speedUpgrade: 5

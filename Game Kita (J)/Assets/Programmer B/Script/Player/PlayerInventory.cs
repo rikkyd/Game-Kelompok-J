@@ -17,6 +17,18 @@ public class PlayerInventory : MonoBehaviour
         
     }
 
+    public void CollectArrow()
+    {
+        if (playerStats.arrowCount <= playerStats.maxArrowCount){
+            playerStats.arrowCount++;
+            Debug.Log("Arrow collected. Total arrow: " + playerStats.arrowCount);
+        }
+        else
+        {
+            Debug.Log("Arrow count is at maximum.");
+        }
+    }
+
     public void CollectCoin()
     {
         playerStats.coinCount++;
