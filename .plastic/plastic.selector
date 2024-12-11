@@ -1,4 +1,0 @@
-repository "Project-Capstone-Kelompok-J/Game-Kelompok-J@18968161156409@cloud"
-  path "/"
-    br "/main"
-    co "/main"

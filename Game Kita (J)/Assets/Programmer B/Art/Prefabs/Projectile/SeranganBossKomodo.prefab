@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6287162712730484569}
   - component: {fileID: 1142651972903791108}
   - component: {fileID: -5636324973938076838}
-  - component: {fileID: 6956909485522531632}
+  - component: {fileID: 8823838657253754046}
   m_Layer: 0
   m_Name: SeranganBossKomodo
-  m_TagString: Enemy
+  m_TagString: ProjectileKomodo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.50000006
---- !u!114 &6956909485522531632
+--- !u!114 &8823838657253754046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,9 +130,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 951795789892928175}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbbd343fa71e25498b3a16d1cca193e, type: 3}
+  m_Script: {fileID: 11500000, guid: 004e6533a4bfc8148990eb7213bdc3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  slowDuration: 1.5
-  slowAmount: 0.4
+  speed: 3
