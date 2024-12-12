@@ -2451,6 +2451,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 7086105120652128211, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
       propertyPath: m_Name
       value: ArrowTrap
@@ -3404,11 +3416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.84
+      value: 17.9
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.39
+      value: 11.1
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.z

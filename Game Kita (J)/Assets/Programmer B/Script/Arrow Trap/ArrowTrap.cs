@@ -6,15 +6,16 @@ public class ArrowTrap : MonoBehaviour
 {
     public GameObject projectile;
     public Transform spawnLocation;
-    public Quaternion spawnRotation;
     public DetectionZone detectionZone;
 
     public float spawnTime = 0.5f;
     public float timesinceSpawned = 0.1f;
-// Start is called before the first frame update
-void Start()
+    private Quaternion spawnRotation;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        
+        spawnRotation = Quaternion.Euler(0, 0, -90); // Atur rotasi ke arah yang benar
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ void Start()
 
             if (timesinceSpawned >= spawnTime)
             {
-                Debug.Log("Spawning Arrow");
+                Debug.Log("Spawning Arrow with Rotation: " + spawnRotation.eulerAngles);
                 Instantiate(projectile, spawnLocation.position, spawnRotation);
                 timesinceSpawned = 0;
             }
