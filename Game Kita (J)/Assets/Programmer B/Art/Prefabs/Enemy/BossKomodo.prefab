@@ -175,6 +175,6 @@ MonoBehaviour:
   stopDistance: 1.4
   retreatDistance: 0.9
   detectionRange: 25.1
-  startTimeBetweenShot: 1.2
+  startTimeBetweenShot: 0.8
   health: 8
   projectile: {fileID: 951795789892928175, guid: aacdd53bc2d660347ae58ca4d470dd28, type: 3}

@@ -1595,7 +1595,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2664,10 +2664,6 @@ PrefabInstance:
     - target: {fileID: 5425484164648029678, guid: 7e4f5fad73319b542955b4dc96ac0c52, type: 3}
       propertyPath: m_Layer
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7723109383963866636, guid: 7e4f5fad73319b542955b4dc96ac0c52, type: 3}
-      propertyPath: startTimeBetweenShot
-      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
