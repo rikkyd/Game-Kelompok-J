@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2011319015225124797}
   - component: {fileID: 6413115100894771508}
   - component: {fileID: 1307754850701004653}
+  - component: {fileID: 4467951504333557394}
   m_Layer: 10
   m_Name: BossBuaya
   m_TagString: Enemy
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2826078352379587469}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 34.42, y: 11.4, z: 0.0072473693}
   m_LocalScale: {x: 1.6777799, y: 1.6777799, z: 1.6777799}
   m_ConstrainProportionsScale: 0
@@ -178,3 +179,20 @@ MonoBehaviour:
   startTimeBetweenShot: 1
   health: 10
   projectile: {fileID: 951795789892928175, guid: aabcf316c7d7eab44960f0d392ba12f9, type: 3}
+--- !u!114 &4467951504333557394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826078352379587469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b575ad70721358469a937fdadbd1bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropItems:
+  - itemPrefab: {fileID: 2939902198802488352, guid: 10722116d35406b4381afcf9434c608f, type: 3}
+    dropAmount: 5
+  - itemPrefab: {fileID: 1635439740335288807, guid: bb5a1e3197ee8aa4ea6627adabb96588, type: 3}
+    dropAmount: 1

@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6170144695612036246}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -32.08, y: 9.6, z: 0.014494739}
   m_LocalScale: {x: 1.5726823, y: 1.5726823, z: 1.5726823}
   m_ConstrainProportionsScale: 0
@@ -195,9 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b575ad70721358469a937fdadbd1bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabs:
-  - {fileID: 0}
-  dropIndex: 0
+  dropItems: []
 --- !u!114 &2756879068342591368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,5 +208,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b575ad70721358469a937fdadbd1bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefabs: []
-  dropIndex: 0
+  dropItems:
+  - itemPrefab: {fileID: 2939902198802488352, guid: 10722116d35406b4381afcf9434c608f, type: 3}
+    dropAmount: 5
+  - itemPrefab: {fileID: 7508624161596473403, guid: a433580cf40267c4aa996aaa18da5ebe, type: 3}
+    dropAmount: 5
