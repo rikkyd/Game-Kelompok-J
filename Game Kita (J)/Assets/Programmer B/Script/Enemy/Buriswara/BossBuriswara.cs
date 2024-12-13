@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossBuriswara : MonoBehaviour
 {
     [Header("Boss Stats")]
-    public int maxHealth = 100;
+    public int maxHealth = 10;
     private int currentHealth;
 
     [Header("Phase 1 Settings")]
@@ -81,29 +81,32 @@ public class BossBuriswara : MonoBehaviour
     }
 
     private void AttackPlayer()
+{
+    if (attackCooldown <= 0f)
     {
-        if (attackCooldown <= 0f)
+        // Serang pemain
+        Debug.Log("Boss menyerang pemain!");
+        if (player.TryGetComponent(out PlayerController playerController))
         {
-            // Serang pemain
-            Debug.Log("Boss menyerang pemain!");
-            if (player.TryGetComponent(out PlayerController playerController))
-            {
-                playerController.TakeDamage(damage);
-            }
-
-            // Set ulang cooldown
-            attackCooldown = isPhase2 ? attackCooldownPhase2 : attackCooldownPhase1;
-
-            // Mainkan animasi serangan
-            animator.SetTrigger("Attack");
-        }
-        else
-        {
-            attackCooldown -= Time.deltaTime;
+            playerController.TakeDamage(damage);
         }
 
-        animator.SetBool("IsMoving", false);
+        // Set ulang cooldown
+        attackCooldown = isPhase2 ? attackCooldownPhase2 : attackCooldownPhase1;
+
+        // Set parameter animasi untuk Blend Tree Attack
+        Vector2 direction = (player.position - transform.position).normalized;
+        animator.SetFloat("MoveX", direction.x);
+        animator.SetFloat("MoveY", direction.y);
+        animator.SetTrigger("Attack");
     }
+    else
+    {
+        attackCooldown -= Time.deltaTime;
+    }
+
+    animator.SetBool("IsMoving", false);
+}
 
     private void ActivatePhase2()
     {
@@ -114,18 +117,19 @@ public class BossBuriswara : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"Boss menerima {damage} damage. Sisa darah: {currentHealth}");
+        Debug.Log($"Boss menerima damage. Sisa darah: {currentHealth}");
 
         if (currentHealth <= 0)
         {
             Die();
+            Destroy(gameObject);
         }
     }
 
     private void Die()
     {
         Debug.Log("Boss mati!");
-        animator.SetTrigger("Die");
-        Destroy(gameObject, 1f); // Hancurkan bos setelah animasi kematian
+       // animator.SetTrigger("Die");
+        // Destroy(gameObject, 1f); // Hancurkan bos setelah animasi kematian
     }
 }
