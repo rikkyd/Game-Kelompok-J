@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossBuriswara : MonoBehaviour
 {
     [Header("Boss Stats")]
-    public int maxHealth = 100;
+    public int maxHealth = 10;
     private int currentHealth;
 
     [Header("Phase 1 Settings")]
@@ -15,6 +15,10 @@ public class BossBuriswara : MonoBehaviour
     [Header("Phase 2 Settings")]
     public float moveSpeedPhase2 = 4f;
     public float attackCooldownPhase2 = 1f;
+
+    [Header("Detection Settings")]
+    public float detectionRange = 5f;
+    public LayerMask obstacleLayer; 
 
     [Header("Attack Settings")]
     public float attackRange = 1.5f;
@@ -36,7 +40,6 @@ public class BossBuriswara : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        // Cari pemain dengan tag "Player"
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (player == null)
         {
@@ -47,18 +50,23 @@ public class BossBuriswara : MonoBehaviour
     private void Update()
     {
         if (player == null) return;
-
-        // Periksa jarak ke pemain
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-        // Pindah ke pemain jika dalam jarak serang
-        if (distanceToPlayer > attackRange)
+        if (distanceToPlayer <= detectionRange && !IsPathBlocked(player.position))
         {
-            MoveTowardsPlayer();
+            if (distanceToPlayer > attackRange)
+            {
+                MoveTowardsPlayer();
+            }
+            else
+            {
+                AttackPlayer();
+            }
         }
         else
         {
-            AttackPlayer();
+            // Jika pemain di luar jarak deteksi atau terhalang, berhenti bergerak
+            animator.SetBool("IsMoving", false);
         }
 
         // Periksa apakah fase kedua aktif
@@ -84,17 +92,16 @@ public class BossBuriswara : MonoBehaviour
     {
         if (attackCooldown <= 0f)
         {
-            // Serang pemain
-            Debug.Log("Boss menyerang pemain!");
+            Debug.Log("burisrawa nyerang");
             if (player.TryGetComponent(out PlayerController playerController))
             {
                 playerController.TakeDamage(damage);
             }
-
-            // Set ulang cooldown
             attackCooldown = isPhase2 ? attackCooldownPhase2 : attackCooldownPhase1;
 
-            // Mainkan animasi serangan
+            Vector2 direction = (player.position - transform.position).normalized;
+            animator.SetFloat("MoveX", direction.x);
+            animator.SetFloat("MoveY", direction.y);
             animator.SetTrigger("Attack");
         }
         else
@@ -105,27 +112,43 @@ public class BossBuriswara : MonoBehaviour
         animator.SetBool("IsMoving", false);
     }
 
+    private bool IsPathBlocked(Vector2 targetPosition)
+    {
+        Vector2 direction = targetPosition - (Vector2)transform.position;
+        float distance = direction.magnitude;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, distance, obstacleLayer);
+
+        return hit.collider != null; // Mengembalikan true jika ada penghalang
+    }
+
     private void ActivatePhase2()
     {
         isPhase2 = true;
-        Debug.Log("Fase kedua aktif! Kecepatan dan kecepatan serangan bos meningkat.");
+        Debug.Log("Fase kedua.");
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"Boss menerima {damage} damage. Sisa darah: {currentHealth}");
+        Debug.Log($"Boss menerima damage. Sisa darah: {currentHealth}");
 
         if (currentHealth <= 0)
         {
             Die();
+            Destroy(gameObject);
         }
     }
 
     private void Die()
     {
         Debug.Log("Boss mati!");
-        animator.SetTrigger("Die");
-        Destroy(gameObject, 1f); // Hancurkan bos setelah animasi kematian
+        // animator.SetTrigger("Die");
+        // Destroy(gameObject, 1f); // Hancurkan bos setelah animasi kematian
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 }

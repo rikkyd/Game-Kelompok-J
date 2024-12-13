@@ -117,7 +117,6 @@ public class BossKomodo : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        // penanda zona deteksi 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }

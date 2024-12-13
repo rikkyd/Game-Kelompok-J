@@ -28,7 +28,7 @@ public class ArrowTrap : MonoBehaviour
 
             if (timesinceSpawned >= spawnTime)
             {
-                Debug.Log("Spawning Arrow with Rotation: " + spawnRotation.eulerAngles);
+                Debug.Log("Spawning Arrow with Rotation: " + spawnRotation);
                 Instantiate(projectile, spawnLocation.position, spawnRotation);
                 timesinceSpawned = 0;
             }

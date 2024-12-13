@@ -32,6 +32,9 @@ public class Panah : MonoBehaviour
 
                 BossKomodo bossKomodo = hitInfo.collider.GetComponent<BossKomodo>();
                 if (bossKomodo != null) bossKomodo.TakeDamage(damage);
+
+                BossBuriswara bossBuriswara = hitInfo.collider.GetComponent<BossBuriswara>();
+                if (bossBuriswara != null) bossBuriswara.TakeDamage(damage);
             }
             DestroyProjectile();
         }

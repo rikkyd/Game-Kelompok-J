@@ -223,7 +223,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  startTimeBtwShots: 0.2
+  startTimeBtwShots: 1.5
   playerUI: {fileID: 0}
   senjataPlayer: {fileID: 4536096294524069819}
   playerStats: {fileID: 11400000, guid: 9ba609cd9bf93554cbe27660c7524a7d, type: 2}
