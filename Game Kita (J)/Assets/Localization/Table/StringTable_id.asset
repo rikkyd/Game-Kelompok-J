@@ -58,6 +58,130 @@ MonoBehaviour:
     m_Localized: Bahasa
     m_Metadata:
       m_Items: []
+  - m_Id: 5619472204206080
+    m_Localized: "\rPada suatu hari yang cerah di Kerajaan Amarta, Wara Sembadra
+      duduk sendiri di taman istana. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619528978305024
+    m_Localized: Ia bersenandung lembut, suaranya seperti alunan angin yang membawa
+      ketenangan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619548670562304
+    m_Localized: 'Tanpa ia sadari, di balik rindang pepohonan yang gelap, sepasang
+      mata tajam mengintai. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619561190559744
+    m_Localized: Burisrawa, diam-diam, memperhatikannya dari kejauhan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619577426710528
+    m_Localized: 'Burisrawa keluar dari persembunyiannya. Sembadra terkejut dan langsung
+      berdiri, matanya menatapnya dengan penuh ketakutan. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619592673005568
+    m_Localized: '"Burisrawa, tolong tinggalkan aku sendiri, aku sudah punya suami,"
+      katanya lembut, menegaskan bahwa hatinya tak akan pernah berpaling.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619607021719552
+    m_Localized: 'Tanpa peringatan, Burisrawa menarik kerisnya dan menodongkannya
+      tepat di depan wajah Sembadra. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619620070199296
+    m_Localized: '"Jika kau terus menolak, maka rasakan akibatnya!" ancamnya. Namun,
+      Sembadra tetap berdiri tegak, meski ketakutannya mulai menguasai.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619638088929280
+    m_Localized: '"Daripada menyerahkan tubuhku pada kehinaan dan pengkhianatan,
+      lebih baik aku mati menjaga kehormatan dan kesetiaanku kepada suamiku!" '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619651170963456
+    m_Localized: Sembadra dengan cepat menusukkan keris itu ke dadanya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619662755631104
+    m_Localized: Dari kejauhan, Srikandi terkejut mendengar suara teriakan pilu Sembadra,
+      dengan perasaan cemas, Srikandi berlari menuju sumber suara tersebut.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619672108929024
+    m_Localized: 'Burisrawa terkejut melihat tindakan Sembadra. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619678350053376
+    m_Localized: Rasa takut dan bersalah segera menguasainya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619685161603072
+    m_Localized: Tanpa berpikir panjang, Burisrawa melarikan diri dari tempat itu,
+      Ia meninggalkan Sembadra yang terjatuh, tubuhnya tergeletak di taman dengan
+      darah yang mulai mengalir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619694959497216
+    m_Localized: Srikandi terkejut saat melihat Sembadra tergeletak tak bernyawa,
+      dengan darah mengalir dari luka di dadanya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619703813672960
+    m_Localized: 'Namun, tak ada waktu untuk bersedih. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619717940088832
+    m_Localized: 'Srikandi mendengar suara langkah kaki tergesa-gesa dari arah hutan
+      yang gelap. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620173496029184
+    m_Localized: Matanya tajam menatap ke arah sumber suara dengan waspada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620223185948672
+    m_Localized: 'Srikandi segera berlari menuju hutan, mengikuti suara langkah kaki
+      yang menjauh. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620236167319552
+    m_Localized: 'Namun, setibanya di sana, ia tak melihat siapa pun. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620267372941312
+    m_Localized: Tak mau menyerah, ia terus berlari, menerobos gelapnya pepohonan
+      dengan tekad membara untuk menemukan pelaku yang telah membuat Sembadra kehilangan
+      nyawanya.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842906624462848
+    m_Localized: Mulai Baru
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842984357498880
+    m_Localized: Lanjutkan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843301132308480
+    m_Localized: Bagian 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843353179426816
+    m_Localized: Bagian 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843395508342784
+    m_Localized: Bagian 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843882810970112
+    m_Localized: Pilih Bagian
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -55,6 +55,114 @@ MonoBehaviour:
     m_Key: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 5619472204206080
+    m_Key: dialog 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619528978305024
+    m_Key: dialog 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619548670562304
+    m_Key: dialog 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619561190559744
+    m_Key: dialog 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619577426710528
+    m_Key: dialog 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619592673005568
+    m_Key: dialog 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619607021719552
+    m_Key: dialog 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619620070199296
+    m_Key: dialog 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619638088929280
+    m_Key: dialog 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619651170963456
+    m_Key: dialog 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619662755631104
+    m_Key: dialog 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619672108929024
+    m_Key: dialog 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619678350053376
+    m_Key: dialog 13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619685161603072
+    m_Key: dialog 14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619694959497216
+    m_Key: dialog 15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619703813672960
+    m_Key: dialog 16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619717940088832
+    m_Key: dialog 17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620173496029184
+    m_Key: dialog 18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620223185948672
+    m_Key: dialog 19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620236167319552
+    m_Key: dialog 20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620267372941312
+    m_Key: dialog 21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842906624462848
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842984357498880
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843301132308480
+    m_Key: Chapter 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843353179426816
+    m_Key: Chapter 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843395508342784
+    m_Key: Chapter 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843882810970112
+    m_Key: Chapter Select
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

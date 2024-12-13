@@ -58,6 +58,130 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
+  - m_Id: 5619472204206080
+    m_Localized: "On a bright sunny day in the Kingdom of Amarta, Wara Sembadra sat
+      alone in the palace garden.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619528978305024
+    m_Localized: "She hummed softly, her voice like the gentle breeze bringing tranquility. 
+      \r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619548670562304
+    m_Localized: "Unbeknownst to her, hidden behind the dense, dark trees, a pair
+      of sharp eyes watched her intently.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619561190559744
+    m_Localized: "Burisrawa secretly observed her from afar.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619577426710528
+    m_Localized: "Burisrawa stepped out from his hiding place. Sembadra was startled
+      and immediately stood up, her eyes filled with fear.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619592673005568
+    m_Localized: "\"Burisrawa, please leave me alone. I am already married,\" she
+      said softly, asserting that her heart would never waver.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619607021719552
+    m_Localized: "Without warning, Burisrawa drew his dagger and pointed it directly
+      at Sembadra's face.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619620070199296
+    m_Localized: "\"If you keep refusing, then suffer the consequences!\" he threatened.
+      But Sembadra stood firm, though fear began to consume her.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619638088929280
+    m_Localized: "\"Rather than surrendering my body to disgrace and betrayal, I
+      would rather die defending my honor and loyalty to my husband!\"  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619651170963456
+    m_Localized: "Sembadra swiftly plunged the dagger into her chest.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619662755631104
+    m_Localized: "From a distance, Srikandi was startled by Sembadra's heart-wrenching
+      scream. Filled with anxiety, she ran toward the source of the sound.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619672108929024
+    m_Localized: "Burisrawa was shocked to see Sembadra's actions.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619678350053376
+    m_Localized: "Fear and guilt immediately overwhelmed him.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619685161603072
+    m_Localized: "Without thinking twice, Burisrawa fled the scene, leaving Sembadra's
+      lifeless body lying in the garden, blood beginning to flow.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619694959497216
+    m_Localized: "Srikandi was horrified to find Sembadra lying lifeless, blood streaming
+      from the wound on her chest.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619703813672960
+    m_Localized: "But there was no time for grief.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619717940088832
+    m_Localized: "Srikandi heard hurried footsteps coming from the dark forest. 
+      \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620173496029184
+    m_Localized: "Her sharp eyes fixed on the source of the sound, full of caution. 
+      \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620223185948672
+    m_Localized: "Srikandi quickly ran toward the forest, following the sound of
+      the retreating footsteps.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620236167319552
+    m_Localized: "However, when she arrived, she saw no one.  \r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620267372941312
+    m_Localized: 'Unwilling to give up, she pressed on, running through the darkness
+      of the trees with a burning determination to find the perpetrator who had taken
+      Sembadra''s life.  '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842906624462848
+    m_Localized: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842984357498880
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843301132308480
+    m_Localized: Chapter 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843353179426816
+    m_Localized: Chapter 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843395508342784
+    m_Localized: Chapter 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843882810970112
+    m_Localized: Chapter Select
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
