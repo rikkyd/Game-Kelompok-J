@@ -103,6 +103,7 @@ public class BossKomodo : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            Destroy(gameObject);
         }
     }
 

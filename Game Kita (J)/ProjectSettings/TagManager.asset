@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - NonDamageTrap
   - ProjectileKomodo
+  - Coin
+  - Arrow
+  - Potion
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - 
   - Object
   - Enemy
-  - 
+  - Collectibles
   - 
   - 
   - 
@@ -44,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Collectibles
+    uniqueID: 3882531741
     locked: 0
