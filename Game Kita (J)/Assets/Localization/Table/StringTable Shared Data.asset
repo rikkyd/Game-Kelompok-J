@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: 54e44188b2144de41aa78894d13834ca
+  m_Entries:
+  - m_Id: 131509850112
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003617435455488
+    m_Key: Store
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003729154936832
+    m_Key: Setting
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003776135335936
+    m_Key: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003821702254592
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003870326820864
+    m_Key: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003916589993984
+    m_Key: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4003981312299008
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4004018943594496
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4004105635663872
+    m_Key: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619472204206080
+    m_Key: dialog 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619528978305024
+    m_Key: dialog 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619548670562304
+    m_Key: dialog 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619561190559744
+    m_Key: dialog 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619577426710528
+    m_Key: dialog 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619592673005568
+    m_Key: dialog 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619607021719552
+    m_Key: dialog 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619620070199296
+    m_Key: dialog 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619638088929280
+    m_Key: dialog 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619651170963456
+    m_Key: dialog 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619662755631104
+    m_Key: dialog 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619672108929024
+    m_Key: dialog 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619678350053376
+    m_Key: dialog 13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619685161603072
+    m_Key: dialog 14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619694959497216
+    m_Key: dialog 15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619703813672960
+    m_Key: dialog 16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5619717940088832
+    m_Key: dialog 17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620173496029184
+    m_Key: dialog 18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620223185948672
+    m_Key: dialog 19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620236167319552
+    m_Key: dialog 20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5620267372941312
+    m_Key: dialog 21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842906624462848
+    m_Key: New Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5842984357498880
+    m_Key: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843301132308480
+    m_Key: Chapter 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843353179426816
+    m_Key: Chapter 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843395508342784
+    m_Key: Chapter 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5843882810970112
+    m_Key: Chapter Select
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3669196273938858008
+  references:
+    version: 2
+    RefIds:
+    - rid: 3669196273938858008
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1732727623621
