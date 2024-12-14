@@ -99,12 +99,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50aa7dddd13eaa04a96265aa45ee6bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
-  moveSpeedPhase1: 2
-  attackCooldownPhase1: 2
-  moveSpeedPhase2: 4
-  attackCooldownPhase2: 1
-  attackRange: 1.5
+  maxHealth: 18
+  moveSpeedPhase1: 10
+  attackCooldownPhase1: 1
+  moveSpeedPhase2: 11
+  attackCooldownPhase2: 0.7
+  detectionRange: 20
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  attackRange: 5
   damage: 2
 --- !u!61 &292695801896288648
 BoxCollider2D:

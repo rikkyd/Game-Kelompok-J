@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -158,6 +159,7 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         animator.SetBool("isDeath", true);
         this.enabled = false; // Disable the player controller script
+        //SceneManager.LoadScene(MainMenu);
     }
 
     // Method to detect collision with enemy

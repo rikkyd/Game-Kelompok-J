@@ -145,7 +145,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.10566139, y: 0.105661154}
@@ -177,8 +177,8 @@ MonoBehaviour:
   stopDistance: 1.2
   retreatDistance: 0.7
   detectionRange: 16.89
-  startTimeBetweenShot: 1.6
-  health: 6
+  startTimeBetweenShot: 1
+  health: 12
   patrolSpeed: 0
   startWaitTime: 0
   moveSpots: []

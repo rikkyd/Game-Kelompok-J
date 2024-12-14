@@ -546,9 +546,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 439401373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae59793a584a1440a48385708defcd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ae80fd894e45a44ad939246036d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoad: Stage3
+  enemyTag: Enemy
 --- !u!61 &439401375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1161,7 +1163,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.00012
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000009dbb6ae7
@@ -5605,7 +5607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.36
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2281,9 +2281,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 631517108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae59793a584a1440a48385708defcd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ae80fd894e45a44ad939246036d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoad: Stage4
+  enemyTag: Enemy
 --- !u!61 &631517110
 BoxCollider2D:
   m_ObjectHideFlags: 0

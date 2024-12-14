@@ -220,6 +220,6 @@ public class StoreManager : MonoBehaviour
 
     public void BackBtn()
     {
-        return;
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }
