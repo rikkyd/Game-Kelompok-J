@@ -10,12 +10,11 @@ public class ArrowTrap : MonoBehaviour
 
     public float spawnTime = 0.5f;
     public float timesinceSpawned = 0.1f;
-    private Quaternion spawnRotation;
+    public Quaternion spawnRotation;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnRotation = Quaternion.identity;
     }
 
     // Update is called once per frame
@@ -24,12 +23,11 @@ public class ArrowTrap : MonoBehaviour
         if (detectionZone.detectedObj.Count > 0)
         {
             timesinceSpawned += Time.deltaTime;
-            Debug.Log("Time Since Spawned: " + timesinceSpawned);
+            Debug.Log("Panah muncul " + timesinceSpawned);
 
             if (timesinceSpawned >= spawnTime)
             {
-                Debug.Log("Spawning Arrow with Rotation: " + spawnRotation);
-                Instantiate(projectile, spawnLocation.position, spawnRotation * Quaternion.Euler(0, 0, 0));
+                Instantiate(projectile, spawnLocation.position, spawnRotation);
                 timesinceSpawned = 0;
             }
         }
