@@ -159,7 +159,11 @@ public class PlayerController : MonoBehaviour
         isDead = true;
         animator.SetBool("isDeath", true);
         this.enabled = false; // Disable the player controller script
-        //SceneManager.LoadScene(MainMenu);
+    }
+
+    public void OnDeathAnimationEnd()
+    {
+        SceneManager.LoadScene("StageSelection");
     }
 
     // Method to detect collision with enemy
