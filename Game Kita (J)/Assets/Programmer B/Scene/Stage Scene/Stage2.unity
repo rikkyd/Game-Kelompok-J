@@ -546,9 +546,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 439401373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cae59793a584a1440a48385708defcd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 84ae80fd894e45a44ad939246036d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoad: Stage3
+  enemyTag: Enemy
 --- !u!61 &439401375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3204,10 +3206,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4197902591667077648, guid: c5580d5b1ca335848b6935641fdc020e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 4234651450677772644, guid: c5580d5b1ca335848b6935641fdc020e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.08
@@ -4438,7 +4436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 10
+  knockbackForce: 15
 --- !u!61 &3278463460626224845
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6288,7 +6286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 10
+  knockbackForce: 15
 --- !u!1 &8015701872263533426
 GameObject:
   m_ObjectHideFlags: 0
@@ -6488,7 +6486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 10
+  knockbackForce: 15
 --- !u!4 &8655399425217405491
 Transform:
   m_ObjectHideFlags: 0
@@ -6575,7 +6573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 10
+  knockbackForce: 15
 --- !u!95 &8703076912795885542
 Animator:
   serializedVersion: 5
@@ -6711,7 +6709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 10
+  knockbackForce: 15
 --- !u!1 &9128549615388175541
 GameObject:
   m_ObjectHideFlags: 0

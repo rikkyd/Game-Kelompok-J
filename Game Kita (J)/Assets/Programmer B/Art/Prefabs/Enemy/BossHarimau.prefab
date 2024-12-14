@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,8 +177,8 @@ MonoBehaviour:
   stopDistance: 1.2
   retreatDistance: 0.7
   detectionRange: 16.89
-  startTimeBetweenShot: 1.6
-  health: 6
+  startTimeBetweenShot: 1.2
+  health: 10
   patrolSpeed: 0
   startWaitTime: 0
   moveSpots: []

@@ -144,7 +144,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.00000023841858, y: 0.047726154}
@@ -176,8 +176,8 @@ MonoBehaviour:
   stopDistance: 1
   retreatDistance: 0.5
   detectionRange: 17
-  startTimeBetweenShot: 1
-  health: 10
+  startTimeBetweenShot: 1.5
+  health: 8
   projectile: {fileID: 951795789892928175, guid: aabcf316c7d7eab44960f0d392ba12f9, type: 3}
 --- !u!114 &4467951504333557394
 MonoBehaviour:

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneStage1 : MonoBehaviour
+public class NewScene : MonoBehaviour
 {
     public string sceneLoad;
     public string enemyTag;

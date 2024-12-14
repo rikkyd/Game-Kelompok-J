@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectilleBuaya : MonoBehaviour
+public class ProjectilleKomodo : MonoBehaviour
 {
 
     public float speed;
