@@ -1460,7 +1460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &424705457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1028351967095475786, guid: 219c7ba1ade0d6d4b82b3d110ef2b1a2, type: 3}
@@ -2531,7 +2531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &565617217 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7073078968818377883, guid: ebeba073b21e6d84a804fb82493e81c7, type: 3}
@@ -3382,11 +3382,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.113766
+      value: -33.1
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.704481
+      value: -26.5
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3721,7 +3721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &759902790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7073078968818377883, guid: ebeba073b21e6d84a804fb82493e81c7, type: 3}
@@ -3960,7 +3960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &760950349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7679921464798029266, guid: bd9463fbf2583304cae25d9765f56fe6, type: 3}
@@ -4297,7 +4297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &930913093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7679921464798029266, guid: bd9463fbf2583304cae25d9765f56fe6, type: 3}
@@ -4666,7 +4666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &1243173180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1028351967095475786, guid: 219c7ba1ade0d6d4b82b3d110ef2b1a2, type: 3}
@@ -5161,6 +5161,10 @@ PrefabInstance:
     - target: {fileID: 2826078352379587469, guid: 7693396a24124674db6478d8cddb2798, type: 3}
       propertyPath: m_Name
       value: BossBuaya
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826078352379587469, guid: 7693396a24124674db6478d8cddb2798, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5684,7 +5688,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ae80fd894e45a44ad939246036d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoad: Stage2
+  sceneLoad: StageSelection
   enemyTag: Enemy
 --- !u!61 &1751258659
 BoxCollider2D:
@@ -5894,7 +5898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c693f2afdfe6844ab47fd9ec6e71216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 30
+  knockbackForce: 15
 --- !u!4 &1759286705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4358872648563423366, guid: cb00b30e03fa7af4cb3a645a896503f3, type: 3}

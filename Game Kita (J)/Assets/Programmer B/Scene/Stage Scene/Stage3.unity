@@ -2284,7 +2284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ae80fd894e45a44ad939246036d825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneLoad: Stage4
+  sceneLoad: StageSelection
   enemyTag: Enemy
 --- !u!61 &631517110
 BoxCollider2D:

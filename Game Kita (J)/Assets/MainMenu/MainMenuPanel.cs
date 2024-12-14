@@ -20,6 +20,11 @@ public class MainMenuPanel : MonoBehaviour
         Application.Quit();
     }
 
+    public void Chapter1()
+    {
+        SceneManager.LoadScene("Stage1", LoadSceneMode.Single);
+    }
+
     public void Chapter2()
     {
         SceneManager.LoadScene("Stage2", LoadSceneMode.Single);

@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Programmer B/Scene/HUD and Store/StoreScene.unity
     guid: 8b3d431caceae404783c9579223be802
+  - enabled: 1
+    path: Assets/StageSelection.unity
+    guid: 0748961d8908ddb41a647a472d82b3c8
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: d6dea5f226b849340a2f2941c53187c9, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 1c59fff9be803ec44a0c16c79b5ce8dd, type: 2}

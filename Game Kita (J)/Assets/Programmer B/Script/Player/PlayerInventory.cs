@@ -51,9 +51,17 @@ public class PlayerInventory : MonoBehaviour
     {
         if (playerStats.potionCount > 0)
         {
+            if (playerStats.health < 5)
+            {
+                playerStats.health++;
+                Debug.Log("Potion used. Health increased to: " + playerStats.health);
+            }
+            else
+            {
+                Debug.Log("Health is already at maximum. Potion used, but no effect.");
+            }
             playerStats.potionCount--;
-            playerStats.health++;
-            Debug.Log("Potion used. Remaining potions: " + playerStats.potionCount);
+            Debug.Log("Remaining potions: " + playerStats.potionCount);
         }
         else
         {
