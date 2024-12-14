@@ -15,7 +15,7 @@ public class ArrowTrap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnRotation = Quaternion.Euler(0, 0, -90); // Atur rotasi ke arah yang benar
+        spawnRotation = Quaternion.identity;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class ArrowTrap : MonoBehaviour
             if (timesinceSpawned >= spawnTime)
             {
                 Debug.Log("Spawning Arrow with Rotation: " + spawnRotation);
-                Instantiate(projectile, spawnLocation.position, spawnRotation);
+                Instantiate(projectile, spawnLocation.position, spawnRotation * Quaternion.Euler(0, 0, 0));
                 timesinceSpawned = 0;
             }
         }

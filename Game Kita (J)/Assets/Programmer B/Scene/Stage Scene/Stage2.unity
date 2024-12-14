@@ -2487,75 +2487,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &3570094134787182377
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -15.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 11.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5782714059570140586, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010346275731663123, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7086105120652128211, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
-      propertyPath: m_Name
-      value: ArrowTrap
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6bfe99e786a5ab5489f7d73f2e7ea1cb, type: 3}
 --- !u!4 &3753591165679596539
 Transform:
   m_ObjectHideFlags: 0
@@ -3011,7 +2942,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 994134727
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: e9f331049b690714da7143c1624df11e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3500,11 +3431,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 32.9
+      value: 33.06
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.2
+      value: -14.2
       objectReference: {fileID: 0}
     - target: {fileID: 7443101528939770282, guid: 3b45198dd417b7843a508c16681f36b5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4641,7 +4572,6 @@ SceneRoots:
   - {fileID: 6344529694988601548}
   - {fileID: 478707966}
   - {fileID: 448885678563165647}
-  - {fileID: 3570094134787182377}
   - {fileID: 1829070166}
   - {fileID: 2108577985}
   - {fileID: 439401377}

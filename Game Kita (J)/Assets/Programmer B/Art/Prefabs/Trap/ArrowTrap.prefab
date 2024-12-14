@@ -193,7 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 8325749705622643366, guid: 3e7c9ff21d601cf43b474c66e70950da, type: 3}
   spawnLocation: {fileID: 6010346275731663123}
-  spawnRotation: {x: 0, y: 0, z: 0, w: 0}
   detectionZone: {fileID: 1503610675014175711}
   spawnTime: 1.7
   timesinceSpawned: 0
