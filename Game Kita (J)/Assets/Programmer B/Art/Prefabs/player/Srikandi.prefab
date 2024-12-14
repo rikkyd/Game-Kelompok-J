@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 5998878699157436851}
   - component: {fileID: 8959384403366028207}
   - component: {fileID: 3547957715086800139}
-  - component: {fileID: 3127031254206773774}
   - component: {fileID: 4054541613865811809}
   m_Layer: 0
   m_Name: Srikandi
@@ -41,7 +40,7 @@ Transform:
   m_Children:
   - {fileID: 4964168377265656476}
   - {fileID: 2827164742153221693}
-  - {fileID: 5998041858674239806}
+  - {fileID: 3230040775212253734}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9135894506310571836
@@ -225,7 +224,7 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  startTimeBtwShots: 0.2
+  startTimeBtwShots: 1.5
   playerUI: {fileID: 0}
   senjataPlayer: {fileID: 4536096294524069819}
   playerStats: {fileID: 11400000, guid: 9ba609cd9bf93554cbe27660c7524a7d, type: 2}
@@ -277,22 +276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 9ba609cd9bf93554cbe27660c7524a7d, type: 2}
---- !u!114 &3127031254206773774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2612972935255441308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff605d60107c3047a6be909630ce908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 9ba609cd9bf93554cbe27660c7524a7d, type: 2}
-  coinValue: 1
-  arrowValue: 1
-  potionValue: 1
 --- !u!70 &4054541613865811809
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -359,7 +342,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4964168377265656476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4285290915840201758
+--- !u!1 &4065061069528749563
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,37 +350,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5998041858674239806}
-  - component: {fileID: 7383916447421986262}
+  - component: {fileID: 3230040775212253734}
+  - component: {fileID: 5723995144403192666}
   m_Layer: 0
-  m_Name: Light 2D (11)
+  m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5998041858674239806
+--- !u!4 &3230040775212253734
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285290915840201758}
+  m_GameObject: {fileID: 4065061069528749563}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7443101528939770282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7383916447421986262
+--- !u!114 &5723995144403192666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4285290915840201758}
+  m_GameObject: {fileID: 4065061069528749563}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
@@ -408,7 +391,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 000000009dbb6ae7
@@ -429,8 +412,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.5
-  m_PointLightOuterRadius: 7
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 2.15
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

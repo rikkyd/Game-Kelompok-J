@@ -89,28 +89,34 @@ public class BossBuriswara : MonoBehaviour
     }
 
     private void AttackPlayer()
+{
+    if (attackCooldown <= 0f)
     {
-        if (attackCooldown <= 0f)
-        {
-            Debug.Log("burisrawa nyerang");
-            if (player.TryGetComponent(out PlayerController playerController))
-            {
-                playerController.TakeDamage(damage);
-            }
-            attackCooldown = isPhase2 ? attackCooldownPhase2 : attackCooldownPhase1;
+        Vector2 direction = (player.position - transform.position).normalized;
+        animator.SetFloat("MoveX", direction.x);
+        animator.SetFloat("MoveY", direction.y);
+        animator.SetTrigger("Attack");
 
-            Vector2 direction = (player.position - transform.position).normalized;
-            animator.SetFloat("MoveX", direction.x);
-            animator.SetFloat("MoveY", direction.y);
-            animator.SetTrigger("Attack");
-        }
-        else
-        {
-            attackCooldown -= Time.deltaTime;
-        }
-
-        animator.SetBool("IsMoving", false);
+        // Set cooldown after starting attack animation
+        attackCooldown = isPhase2 ? attackCooldownPhase2 : attackCooldownPhase1;
     }
+    else
+    {
+        attackCooldown -= Time.deltaTime;
+    }
+
+    animator.SetBool("IsMoving", false);
+}
+
+public void DealDamage() // Called by animation event
+{
+    if (player != null && player.TryGetComponent(out PlayerController playerController))
+    {
+        playerController.TakeDamage(damage);
+        Debug.Log("Player takes damage!");
+    }
+}
+
 
     private bool IsPathBlocked(Vector2 targetPosition)
     {

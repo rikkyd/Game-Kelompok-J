@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ba56ff126c4d4f419ec992ef69deeb4
+guid: 891a1361092e3d041900c061542f630c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack Bawah_0
+      name: spritesheet (27)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 255340712d3f09e4d806c0def6ad6ecc
-      internalID: 595534334
+      spriteID: cac5e2877789d0340853d5cb3f70e63b
+      internalID: 1929862256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_1
+      name: spritesheet (27)_1
       rect:
         serializedVersion: 2
-        x: 600
+        x: 1085
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf5d8e15df39e68468fae798c12cc4f1
-      internalID: 1174792880
+      spriteID: d1cb7bc7e0e6a6645b5125ea4c63a9af
+      internalID: 2042493026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_2
+      name: spritesheet (27)_2
       rect:
         serializedVersion: 2
-        x: 1200
+        x: 2170
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1463d88952624ee4d9218184ffe410e8
-      internalID: 362395182
+      spriteID: db3b7ad2181ed39499d92763dd87d910
+      internalID: -1630576400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_3
+      name: spritesheet (27)_3
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 3255
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36cc6612c5620b74ab540369c7b8b7c7
-      internalID: -170346723
+      spriteID: 927ef41c26d17a447b220ae007a8da59
+      internalID: 568119804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_4
+      name: spritesheet (27)_4
       rect:
         serializedVersion: 2
-        x: 2400
+        x: 4340
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 849933be54815c644a6bcdfa31707ec7
-      internalID: -908871206
+      spriteID: 6ef812614efa1c24492495de1c96aa22
+      internalID: 1223480479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_5
+      name: spritesheet (27)_5
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 5425
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b11718c3d7b841478b69dfc47508186
-      internalID: 527925411
+      spriteID: be46fb41656ccc9478cf584f47d71c41
+      internalID: 101109006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_6
+      name: spritesheet (27)_6
       rect:
         serializedVersion: 2
-        x: 3600
+        x: 6510
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14aa7f1ef37ed149aecc1fa6a3e4aa8
-      internalID: 1674253531
+      spriteID: 4deb81901a4dcc14fb95697ec0792c3b
+      internalID: -1591079286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Bawah_7
+      name: spritesheet (27)_7
       rect:
         serializedVersion: 2
-        x: 4200
+        x: 7595
         y: 0
-        width: 600
-        height: 783
+        width: 1085
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 141b43bbf3f892d4fb3dd4948f83db87
-      internalID: -274794231
+      spriteID: 2befc32b6bcaab14ba1e16b32d6670ab
+      internalID: -849642839
       vertices: []
       indices: 
       edges: []
@@ -275,14 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack Bawah_0: 595534334
-      Attack Bawah_1: 1174792880
-      Attack Bawah_2: 362395182
-      Attack Bawah_3: -170346723
-      Attack Bawah_4: -908871206
-      Attack Bawah_5: 527925411
-      Attack Bawah_6: 1674253531
-      Attack Bawah_7: -274794231
+      spritesheet (27)_0: 1929862256
+      spritesheet (27)_1: 2042493026
+      spritesheet (27)_2: -1630576400
+      spritesheet (27)_3: 568119804
+      spritesheet (27)_4: 1223480479
+      spritesheet (27)_5: 101109006
+      spritesheet (27)_6: -1591079286
+      spritesheet (27)_7: -849642839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

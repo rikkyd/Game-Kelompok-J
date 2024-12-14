@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8345b389009b0164e8c2cf520fc47da5
+guid: 04ef195e0a1a20144872beb91d2ba325
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack Atas_0
+      name: spritesheet (26)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f38657ac82eb014e852a4f7860c223e
-      internalID: -104687384
+      spriteID: 3e99a7204ca18684c810c2803243fbe8
+      internalID: 1045461068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_1
+      name: spritesheet (26)_1
       rect:
         serializedVersion: 2
-        x: 648
+        x: 1162
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98c3f81f8a4fe1440a288861744dfa98
-      internalID: 678087298
+      spriteID: 603a586317a1f0a4cbffe417b3aac1c3
+      internalID: -1356109448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_2
+      name: spritesheet (26)_2
       rect:
         serializedVersion: 2
-        x: 1296
+        x: 2324
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f6bf984c19f530409260c7d21bf093e
-      internalID: -955900572
+      spriteID: e013cfa8bbd51f24bb61c6e0df6f4de5
+      internalID: -447014505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_3
+      name: spritesheet (26)_3
       rect:
         serializedVersion: 2
-        x: 1944
+        x: 3486
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f08dbfac07bfe46ab29f4c9a6310ba
-      internalID: 941405672
+      spriteID: 3e989fabba48c854ebd5a4e1e09e9337
+      internalID: 74996756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_4
+      name: spritesheet (26)_4
       rect:
         serializedVersion: 2
-        x: 2592
+        x: 4648
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d02b7029761e44bb6df0862ed2e2d3
-      internalID: -1725535172
+      spriteID: 26e3ca36797f5c04d939779767a40f2d
+      internalID: -726386702
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_5
+      name: spritesheet (26)_5
       rect:
         serializedVersion: 2
-        x: 3240
+        x: 5810
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcd4c685ae7f6964ca994ee243287626
-      internalID: 422210363
+      spriteID: 10fe12b0c5c36a444bb15d9248ca1eef
+      internalID: 972746129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_6
+      name: spritesheet (26)_6
       rect:
         serializedVersion: 2
-        x: 3888
+        x: 6972
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e0ae6253a0af024e804430731b04ad6
-      internalID: -1283222783
+      spriteID: 7ce279f66a21227499aaf3671e1dd9fc
+      internalID: 385637857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack Atas_7
+      name: spritesheet (26)_7
       rect:
         serializedVersion: 2
-        x: 4536
+        x: 8134
         y: 0
-        width: 648
-        height: 1000
+        width: 1162
+        height: 757
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,8 +258,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7e07cd38adcf043b36284d8aa89c1e
-      internalID: 1579622795
+      spriteID: a1a994fdc64d3a745878af8f3c2c7984
+      internalID: -562939132
       vertices: []
       indices: 
       edges: []
@@ -275,14 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack Atas_0: -104687384
-      Attack Atas_1: 678087298
-      Attack Atas_2: -955900572
-      Attack Atas_3: 941405672
-      Attack Atas_4: -1725535172
-      Attack Atas_5: 422210363
-      Attack Atas_6: -1283222783
-      Attack Atas_7: 1579622795
+      spritesheet (26)_0: 1045461068
+      spritesheet (26)_1: -1356109448
+      spritesheet (26)_2: -447014505
+      spritesheet (26)_3: 74996756
+      spritesheet (26)_4: -726386702
+      spritesheet (26)_5: 972746129
+      spritesheet (26)_6: 385637857
+      spritesheet (26)_7: -562939132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

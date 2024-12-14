@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   maxHealth: 5
-  health: 80
+  health: 0
   maxArrowCount: 40
   baseArrowCount: 15
-  arrowCount: 19
-  coinCount: 34
+  arrowCount: 34
+  coinCount: 0
   maxPotionCount: 5
-  potionCount: 2
+  potionCount: 0
   moveSpeed: 9
   baseMoveSpeed: 9
   skillUpgrade: 5
